@@ -9,7 +9,7 @@ import { EmployeeService } from 'src/app/shared/employee.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  appointTypes = ['Hourly Salary Contract', 'Monthly Salary Contract'];
+  contractTypes = ['Hourly Salary Contract', 'Monthly Salary Contract'];
 
   constructor(private service: EmployeeService) { }
 
@@ -37,7 +37,9 @@ export class EmployeeComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    this.service.postEmployee(form.value).subscribe
+    this.service.postEmployee(form.value).subscribe(rest => {
+      this.resetForm(form);
+    });
   }
 
 }

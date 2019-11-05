@@ -1,4 +1,4 @@
-<form #form="ngForm">
+<form #form="ngForm" (submit)="onSubmit(form)">
   <div class="form-group">
     <label>Full Name</label>
     <input name="employeeName" #employeeName="ngModel" [(ngModel)]="service.formData.employeeName" class="form-control" required>
