@@ -21,5 +21,9 @@ export class EmployeeService {
     this.http.get(this.rootURL + '/Employees').toPromise().then(res => this.list = res as Employee[]);
   }
 
+  getEmployeeById(id: number) {
+    this.http.get(this.rootURL + '/Employees').toPromise().then(res => this.list = res as Employee[]);
+  }
+
   // getEmployees()
 }

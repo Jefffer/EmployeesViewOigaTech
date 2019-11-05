@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class EmployeeComponent implements OnInit {
 
-  contractTypes = ['Hourly Salary Contract', 'Monthly Salary Contract'];
+  contractTypes = ['Hourly Salary', 'Monthly Salary'];
 
   constructor(private service: EmployeeService,
     private toastr: ToastrService) { }

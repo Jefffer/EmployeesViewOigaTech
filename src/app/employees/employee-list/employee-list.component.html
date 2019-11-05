@@ -1,3 +1,16 @@
+<form #form="ngForm" (submit)="onSearch(form)">  
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Search Employee by Id</label>
+      <!-- <input name="hourlySalary" #hourlySalary="ngModel" [(ngModel)]="service.formData.hourlySalary" class="form-control" required> -->
+      <input name="idEmployee" ngModel type="number" class="form-control" required>
+    </div>
+    <div class="form-group col-md-3">
+      <label> </label>
+      <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-outline-success">SEARCH</button>
+    </div>
+  </div>
+</form>
 <table class="table table-hover">
   <tr>
     <th>Id</th>    
@@ -6,8 +19,8 @@
     <th>Contract</th>    
     <th>Hourly Salary</th>
     <th>Monthly Salary</th>
-    <th>Annual Hou. Salary</th>
-    <th>Annual Mon. Salary</th>
+    <th>Annual Hourly Salary</th>
+    <th>Annual Monthly Salary</th>
   </tr>
   <tr *ngFor="let emp of service.list">
     <td>{{emp.idEmployee}}</td>

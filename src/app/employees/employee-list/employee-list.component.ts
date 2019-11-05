@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { EmployeeService } from 'src/app/shared/employee.service';
 
 @Component({
@@ -12,5 +13,10 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit() {
     this.service.refreshList();
+  }
+
+  onSearch(form: NgForm) {
+    console.log(form.value.idEmployee);
+    // this.insertRecord(form);
   }
 }
