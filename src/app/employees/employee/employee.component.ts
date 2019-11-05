@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmployeeService } from 'src/app/shared/employee.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-employee',
@@ -11,7 +12,8 @@ export class EmployeeComponent implements OnInit {
 
   contractTypes = ['Hourly Salary Contract', 'Monthly Salary Contract'];
 
-  constructor(private service: EmployeeService) { }
+  constructor(private service: EmployeeService,
+    private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -28,7 +30,9 @@ export class EmployeeComponent implements OnInit {
       employeePosition: '',
       contractType: '',
       hourlySalary: null,
-      monthlySalary: null
+      monthlySalary: null,
+      annualHourlySalary: null,
+      annualMonthlySalary: null
     };
   }
 
@@ -37,7 +41,8 @@ export class EmployeeComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    this.service.postEmployee(form.value).subscribe(rest => {
+    this.service.postEmployee(form.value).subscribe(res => {
+      this.toastr.success('Employee Created', 'Employees Management');
       this.resetForm(form);
     });
   }

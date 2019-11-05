@@ -6,4 +6,6 @@ export class Employee {
     contractType: string;
     hourlySalary: number;
     monthlySalary: number;
+    annualHourlySalary: number;
+    annualMonthlySalary: number;
 }
