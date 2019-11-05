@@ -3,7 +3,7 @@ export class Employee {
     employeeName: string;
     employeePhone: string;
     employeePosition: string;
-    fk_ContractType: number;
+    contractType: string;
     hourlySalary: number;
     monthlySalary: number;
 }
