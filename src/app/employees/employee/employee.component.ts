@@ -42,7 +42,7 @@ export class EmployeeComponent implements OnInit {
 
   insertRecord(form: NgForm) {
     this.service.postEmployee(form.value).subscribe(res => {
-      this.toastr.success('Employee Created', 'Employees Management');
+      this.toastr.success('Employee Created Successfully', 'Employees Management');
       this.resetForm(form);
     });
   }

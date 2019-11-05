@@ -1,3 +1,24 @@
-<p>
-  employee-list works!
-</p>
+<table class="table table-hover">
+  <tr>
+    <th>Id</th>    
+    <th>Full Name</th>    
+    <th>Position</th>    
+    <th>Contract</th>    
+    <th>Hourly Salary</th>
+    <th>Monthly Salary</th>
+    <th>Annual Hou. Salary</th>
+    <th>Annual Mon. Salary</th>
+  </tr>
+  <tr *ngFor="let emp of service.list">
+    <td>{{emp.idEmployee}}</td>
+    <td>{{emp.employeeName}}</td>
+    <td>{{emp.employeePosition}}</td>
+    <td>{{emp.contractType}}</td>
+    <td>{{emp.hourlySalary}}</td>
+    <td>{{emp.monthlySalary}}</td>
+    <td>{{emp.annualHourlySalary}}</td>
+    <td>{{emp.annualMonthlySalary}}</td>
+    <!-- <td><button (click)="onDelete(app.idAppointment, app.AppointmentDateTime)" class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
+    <!-- <td><button class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
+  </tr>
+</table>
