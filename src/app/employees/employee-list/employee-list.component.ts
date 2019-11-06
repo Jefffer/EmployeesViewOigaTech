@@ -12,11 +12,12 @@ export class EmployeeListComponent implements OnInit {
   constructor(private service: EmployeeService) { }
 
   ngOnInit() {
-    this.service.refreshList();
+    // this.service.refreshList();
   }
 
   onSearch(form: NgForm) {
     console.log(form.value.idEmployee);
-    // this.insertRecord(form);
+    this.service.getEmployeeById(form.value.idEmployee);
+    console.log('finish onSearch');
   }
 }

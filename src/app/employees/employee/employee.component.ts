@@ -36,7 +36,7 @@ export class EmployeeComponent implements OnInit {
     };
   }
 
-  onSubmit(form: NgForm){
+  onSubmit(form: NgForm) {
     this.insertRecord(form);
   }
 
@@ -44,6 +44,7 @@ export class EmployeeComponent implements OnInit {
     this.service.postEmployee(form.value).subscribe(res => {
       this.toastr.success('Employee Created Successfully', 'Employees Management');
       this.resetForm(form);
+      this.service.refreshList();
     });
   }
 
