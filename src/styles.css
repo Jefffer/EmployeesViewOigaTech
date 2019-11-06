@@ -29,3 +29,9 @@ div.validation-error{
     font-size: 80%;
     color: #dc3545;
 }
+#myFooter, label {
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    /* font-weight: bold; */
+}
+

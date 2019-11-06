@@ -19,8 +19,8 @@
     <th>Contract</th>    
     <th>Hourly Salary</th>
     <th>Monthly Salary</th>
-    <th>Annual Hourly Salary</th>
-    <th>Annual Monthly Salary</th>
+    <th>Annual Salary</th>
+    <!-- <th>Annual Monthly Salary</th> -->
   </tr>
   <tr *ngFor="let emp of service.list">
     <td>{{emp.idEmployee}}</td>
@@ -30,7 +30,7 @@
     <td>{{emp.hourlySalary}}</td>
     <td>{{emp.monthlySalary}}</td>
     <td>{{emp.annualHourlySalary}}</td>
-    <td>{{emp.annualMonthlySalary}}</td>
+    <!-- <td>{{emp.annualMonthlySalary}}</td> -->
     <!-- <td><button (click)="onDelete(app.idAppointment, app.AppointmentDateTime)" class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
     <!-- <td><button class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
   </tr>
