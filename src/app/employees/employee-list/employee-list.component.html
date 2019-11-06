@@ -27,9 +27,9 @@
     <td>{{emp.employeeName}}</td>
     <td>{{emp.employeePosition}}</td>
     <td>{{emp.contractType}}</td>
-    <td>{{emp.hourlySalary}}</td>
-    <td>{{emp.monthlySalary}}</td>
-    <td>{{emp.annualHourlySalary}}</td>
+    <td>${{emp.hourlySalary | number: '2.'}}</td>
+    <td>${{emp.monthlySalary | number: '2.'}}</td>
+    <td>${{emp.annualHourlySalary | number: '2.'}}</td>
     <!-- <td>{{emp.annualMonthlySalary}}</td> -->
     <!-- <td><button (click)="onDelete(app.idAppointment, app.AppointmentDateTime)" class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
     <!-- <td><button class="btn btn-sm btn-outline-danger">&#935;</button></td> -->
