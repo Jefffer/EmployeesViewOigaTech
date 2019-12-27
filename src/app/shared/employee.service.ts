@@ -11,7 +11,7 @@ export class EmployeeService {
   formData: Employee;
   list: Employee[];
   listEmp: Employee[];
-  readonly rootURL = "http://localhost:57829/api";
+  readonly rootURL = "http://localhost:57829/api"; // API connection
 
   constructor(private http: HttpClient,
     private toastr: ToastrService) { }
